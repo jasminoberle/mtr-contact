@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kontakt speichern</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Allgemeine Stile */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    /* Kontaktinfo */
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contact-card img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .contact-card h2 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p.title {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .contact-card a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+      margin: 5px;
+      display: inline-block;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #0056b3;
+    }
+
+    /* Speichern Button */
+    .save-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .save-btn:hover {
+      background-color: #218838;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contact-card {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .contact-card img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Kontakt speichern</h1>
+      <p>Speichern Sie den Kontakt von Max Mustermann, um mehr über innovative Technologien zu erfahren!</p>
+    </header>
+
+    <div class="contact-card">
+      <img src="https://jasminoberle.github.io/mtr-contact/testperson.jpg" alt="Max Mustermann">
+      <h2>Max Mustermann</h2>
+      <p class="title">Beratung & Vertrieb</p>
+      <a href="https://www.mtr-ag.ch" target="_blank">Website</a>
+      <a href="https://www.linkedin.com/in/jasmin-oberle-468357227" target="_blank">LinkedIn</a>
+
+      <!-- Speichern-Button, der die vCard-Datei generiert und herunterlädt -->
+      <button class="save-btn" id="downloadButton">Kontakt speichern</button>
+    </div>
+  </div>
+
+  <script>
+    // Funktion, um die vCard-Daten zu erstellen und den Download-Link zu generieren
+    document.getElementById("downloadButton").onclick = function() {
+      var vCardData = `BEGIN:VCARD
+VERSION:3.0
+N:Mustermann;Max;;;
+FN:Max Mustermann
+ORG:MTR EQUIPMENTS
+TITLE:Beratung & Vertrieb
+ADR;TYPE=work:;;Bahnhofstrasse 1;Zürich;;8001;Schweiz
+TEL;TYPE=work,voice:+41 00 000 00 00
+TEL;TYPE=cell,voice:+41 00 000 00 00
+EMAIL:max.mustermann@mtr-ag.ch
+NOTE:Beratung für Reha-, Longevity- und Biohacking-Technologien. Persönliche Betreuung, Testgeräte und Schulung inklusive.
+PHOTO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/testperson.jpg
+LOGO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/mtr-logo.jpg
+URL:https://www.mtr-ag.ch
+X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/jasmin-oberle-468357227
+END:VCARD`;
+
+      // Erstelle ein Blob (Datei) mit den vCard-Daten
+      var blob = new Blob([vCardData], { type: 'text/vcard' });
+
+      // Erstelle einen temporären Link und löse den Download aus
+      var link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "Max_Mustermann.vcf";  // Der Name der heruntergeladenen vCard-Datei
+      link.click();
+    };
+  </script>
+
+</body>
+</html>
