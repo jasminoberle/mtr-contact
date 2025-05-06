@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Mustermann;Max;;;
+FN:Max Mustermann
+ORG:MTR EQUIPMENTS
+TITLE:Beratung & Vertrieb
+ADR;TYPE=work:;;Bahnhofstrasse 1;Zürich;;8001;Schweiz
+TEL;TYPE=work,voice:+41 00 000 00 00
+TEL;TYPE=cell,voice:+41 00 000 00 00
+EMAIL:max.mustermann@mtr-ag.ch
+URL:https://www.mtr-ag.ch
+NOTE:Beratung für Reha-, Longevity- und Biohacking-Technologien. Persönliche Betreuung, Testgeräte und Schulung inklusive.
+PHOTO;VALUE=URI:https://www.mtr-ag.ch/image/catalog/Company/Team/Team_am.jpg
+X-SOCIALPROFILE;TYPE=linkedin: www.linkedin.com/in/jasmin-oberle-468357227
+END:VCARD
