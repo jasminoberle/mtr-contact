@@ -8,8 +8,13 @@ ADR;TYPE=work:;;Bahnhofstrasse 1;Zürich;;8001;Schweiz
 TEL;TYPE=work,voice:+41 00 000 00 00
 TEL;TYPE=cell,voice:+41 00 000 00 00
 EMAIL:max.mustermann@mtr-ag.ch
-NOTE:Beratung für Reha-, Longevity- und Biohacking-Technologien. Persönliche Betreuung, Testgeräte und Schulung inklusive.
+NOTE:Beratung für Reha-, Longevity- und Biohacking-Technologien. Persönliche Betreuung, Testgeräte und Schulung inklusive. V1
 PHOTO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/testperson.jpg
+LOGO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/mtr-logo.jpg
+URL:https://www.mtr-ag.ch
+URL:https://www.linkedin.com/in/jasmin-oberle-468357227
+X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/jasmin-oberle-468357227
+
 PHOTO;ENCODING=b;MEDIATYPE=image/jpeg:
 /9j/4QBORXhpZgAATU0AKgAAAAgAAwEaAAUAAAABAAAAMgEbAAUAAAABAAAAOgEoAAMAAAABAAI
 AAAAAAAAACvyAAAAnEAAK/IAAACcQAAAAAP/tAEBQaG90b3Nob3AgMy4wADhCSU0EBgAAAAAABw
@@ -423,8 +428,4 @@ at12t/jV9f5a7n1B1UUR23Xqp1H7KfL5j4xj4/MxqWi5jBX9PkX/AJmjt3fes3N+G8hJy3FYsjM
 uHI3c4RDsQ29SnjsrL+OfIOIYNn8csrxBzsWQA23qJMzNj+R4IazxZo/qDXUd6+FQYXIGT4/ymR
 YLHP8A8Ak/+oNK/9k=
 
-LOGO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/mtr-logo.jpg
-URL:https://www.mtr-ag.ch
-URL:https://www.linkedin.com/in/jasmin-oberle-468357227
-X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/jasmin-oberle-468357227
 END:VCARD
