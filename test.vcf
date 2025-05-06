@@ -9,7 +9,7 @@ TEL;TYPE=work,voice:+41 00 000 00 00
 TEL;TYPE=cell,voice:+41 00 000 00 00
 EMAIL:max.mustermann@mtr-ag.ch
 URL:https://www.mtr-ag.ch
-NOTE:Beratung für Reha-, Longevity- und Biohacking-Technologien. Persönliche Betreuung, Testgeräte und Schulung inklusive.
+NOTE:Beratung für Reha-, Longevity- und Biohacking-Technologien. Persönliche Betreuung, Testgeräte und Schulung inklusive.\nLinkedIn: https://www.linkedin.com/in/jasmin-oberle-468357227
 PHOTO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/testperson.jpg
 X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/jasmin-oberle-468357227
 END:VCARD
