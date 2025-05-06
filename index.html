@@ -1,122 +1,146 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Kontakt speichern</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Save Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* Allgemeine Stile */
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #232323;
+      color: #fff;
     }
+
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: 50px auto;
       padding: 20px;
     }
 
-    /* Header */
-    header {
-      text-align: center;
-      margin-top: 50px;
-    }
-
     h1 {
-      font-size: 2.5rem;
-      color: #333;
-      margin-bottom: 20px;
+      font-size: 2.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-top: 0;
+      text-align: center;
     }
 
-    p {
-      font-size: 1.1rem;
-      color: #777;
-      margin-bottom: 30px;
-    }
-
-    /* Kontaktinfo */
     .contact-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #fff;
+      background-color: #4B4B4B;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 420px;
       margin: 0 auto;
+
+      /* Entry Animation */
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.3s;
     }
 
-    .contact-card img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      margin-bottom: 20px;
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .contact-card h2 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 10px;
+    @keyframes bronzeFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    .contact-card p.title {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .contact-card a {
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-      margin: 5px;
+    .profile-pic-wrapper {
       display: inline-block;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #a65a2a, #ffd2a2, #a65a2a);
+      background-size: 100% 100%;
+    }
+
+    .profile-pic-wrapper img {
+      display: block;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.2rem 0 0 0;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .title {
       font-size: 1rem;
+      margin-bottom: 2rem;
+      margin-top: 0.5rem;
+      font-weight: 300;
+    }
+
+    a {
+      display: block;
+      color: #d19866;
+      font-weight: 500;
+      text-decoration: none;
+      margin: 1rem 0;
       transition: color 0.3s ease;
     }
 
-    .contact-card a:hover {
-      color: #0056b3;
+    a:hover {
+      color: #b37653;
     }
 
-    /* Speichern Button */
-    .save-btn {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      font-size: 1.2rem;
-      border-radius: 5px;
+    .bronze-button {
+      margin-top: 1.2rem;
+      padding: 10px 26px;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      background-image:
+        linear-gradient(#4B4B4B, #4B4B4B),
+        linear-gradient(145deg, #a65a2a, #ffd2a2, #a65a2a);
+      background-size: 100% 100%, 200% 200%;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      color: #ffffff;
+      font-weight: 500;
+      text-decoration: none;
       cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      display: inline-block;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.3s ease;
+      animation: bronzeFlow 3s ease-in-out infinite;
     }
 
-    .save-btn:hover {
-      background-color: #218838;
+    small {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+      color: #adadad;
+      line-height: 1.4;
     }
 
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
+    @media (max-width: 600px) {
       .contact-card {
-        width: 90%;
         padding: 20px;
       }
 
-      .contact-card img {
-        width: 100px;
-        height: 100px;
+      .profile-pic-wrapper img {
+        width: 120px;
+        height: 120px;
       }
     }
   </style>
@@ -124,58 +148,19 @@
 <body>
 
   <div class="container">
-    <header>
-      <h1>Kontakt speichern</h1>
-    </header>
-
+    <h1>Contact</h1>
     <div class="contact-card">
-      <img src="https://jasminoberle.github.io/mtr-contact/testperson.jpg" alt="Max Mustermann">
+      <div class="profile-pic-wrapper">
+        <img src="https://jasminoberle.github.io/mtr-contact/testperson.jpg" alt="Max Mustermann">
+      </div>
       <h2>Max Mustermann</h2>
-      <p class="title">Beratung & Vertrieb</p>
-      <a href="https://www.mtr-ag.ch" target="_blank">Website</a>
-      <a href="https://www.linkedin.com/in/jasmin-oberle-468357227" target="_blank">LinkedIn</a>
-
-      <!-- Speichern-Button, der die vCard-Datei generiert und herunterlädt -->
-      <button class="save-btn" id="downloadButton">Kontakt speichern via Javascript</button>
-      <br>
-      <br>
-      <br>
-      <a href="https://jasminoberle.github.io/mtr-contact/test.vcf" download>
-        Kontakt als vCard speichern (direkt)
-      </a>
+      <p class="title">Sales Manager</p>
+      <a href="https://www.linkedin.com/in/jasmin-oberle-468357227" target="_blank">Connect on LinkedIn</a>
+      <a href="https://www.mtr-ag.ch" target="_blank">Visit MTR Website</a>
+      <a href="https://jasminoberle.github.io/mtr-contact/test.vcf" class="bronze-button">Save to Contacts</a>
+      <small>After downloading, simply click the file to open it in your contacts app and save the contact.</small>
     </div>
   </div>
-
-  <script>
-    // Funktion, um die vCard-Daten zu erstellen und den Download-Link zu generieren
-    document.getElementById("downloadButton").onclick = function() {
-      var vCardData = `BEGIN:VCARD
-VERSION:3.0
-N:Mustermann;Max;;;
-FN:Max Mustermann
-ORG:MTR EQUIPMENTS
-TITLE:Beratung & Vertrieb
-ADR;TYPE=work:;;Bahnhofstrasse 1;Zürich;;8001;Schweiz
-TEL;TYPE=work,voice:+41 00 000 00 00
-TEL;TYPE=cell,voice:+41 00 000 00 00
-EMAIL:max.mustermann@mtr-ag.ch
-NOTE:Beratung für Reha-, Longevity- und Biohacking-Technologien. Persönliche Betreuung, Testgeräte und Schulung inklusive.
-PHOTO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/testperson.jpg
-LOGO;VALUE=URI:https://jasminoberle.github.io/mtr-contact/mtr-logo.jpg
-URL:https://www.mtr-ag.ch
-X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/jasmin-oberle-468357227
-END:VCARD`;
-
-      // Erstelle ein Blob (Datei) mit den vCard-Daten
-      var blob = new Blob([vCardData], { type: 'text/vcard' });
-
-      // Erstelle einen temporären Link und löse den Download aus
-      var link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "Max_Mustermann.vcf";  // Der Name der heruntergeladenen vCard-Datei
-      link.click();
-    };
-  </script>
 
 </body>
 </html>
