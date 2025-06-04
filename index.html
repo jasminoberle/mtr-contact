@@ -23,13 +23,21 @@
       align-items: center;
     }
 
+    .header-container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .logo {
-      width: 8rem;
+      width: 7rem;
       margin-bottom: 1rem;
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 1.6rem;
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 5px;
@@ -154,8 +162,10 @@
 
 <body>
   <div class="container">
-    <img src="assets-mtr_logo-lang-weiss.svg" alt="Logo MTR Equipments" class="logo">
-    <h1>Contact 1</h1>
+    <div class="header-container">
+      <h1>Contact</h1>
+      <img src="assets-mtr_logo-lang-weiss.svg" alt="Logo MTR Equipments" class="logo">
+    </div>
     <div class="contact-card">
       <div class="profile-pic-wrapper">
         <img src="https://jasminoberle.github.io/mtr-contact/testperson.jpg" alt="Max Mustermann">
