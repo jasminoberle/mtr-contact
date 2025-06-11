@@ -42,7 +42,7 @@ tl.to(animationContainer, {
 
 tl.fromTo(contactCard, {
   opacity: 0,
-  y: 20
+  y: 15,
 }, {
   opacity: 1,
   y: 0,
