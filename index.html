@@ -5,192 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #232323;
-      color: #fff;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 10px auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .header-container {
-      width: 100%;
-      max-width: 420px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      width: 7rem;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .contact-card {
-      background-color: #4B4B4B;
-      padding: 30px;
-      border-radius: 24px;
-      box-shadow: 0 0px 12px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      max-width: 420px;
-      margin: 0 auto;
-
-      /* Entry Animation */
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1.2s ease-out forwards;
-      animation-delay: 0.3s;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes bronzeFlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .profile-pic-wrapper {
-      display: inline-block;
-      padding: 4px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #a26244, #e78962, #f7b591, #e0845e, #a2563a, #864e39);
-      background-size: 100% 100%;
-    }
-
-    .profile-pic-wrapper img {
-      display: block;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      margin: 1.2rem 0 0 0;
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .title {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      margin-top: 0.5rem;
-      font-weight: 300;
-    }
-
-    a {
-      display: block;
-      color: #d19866;
-      font-weight: 500;
-      text-decoration: none;
-      margin: 1rem 0;
-      transition: color 0.3s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    svg {
-      width: 1.2rem;
-      height: 1.2rem;
-      margin-right: 0.8rem;
-      fill: #d19866; 
-    }
-
-    .bronze-button {
-      margin-top: 1.2rem;
-      padding: 10px 26px;
-      border: 2px solid transparent;
-      border-radius: 999px;
-      background-image:
-        linear-gradient(#4B4B4B, #4B4B4B),
-        linear-gradient(145deg, #a26244, #e78962, #f7b591, #e0845e, #a2563a, #864e39);
-      background-size: 100% 100%, 200% 200%;
-      background-origin: border-box;
-      background-clip: padding-box, border-box;
-      color: #ffffff;
-      font-weight: 500;
-      text-decoration: none;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      transition: all 0.4s ease;
-      animation: bronzeFlow 6s ease-in-out infinite;
-    }
-
-    small {
-      display: block;
-      margin-top: 0.2rem;
-      font-size: 0.85rem;
-      color: #adadad;
-      line-height: 1.4;
-    }
-
-    @media (max-width: 600px) {
-      .contact-card {
-        padding: 20px;
-      }
-
-      .profile-pic-wrapper img {
-        width: 120px;
-        height: 120px;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="container">
     <div class="header-container">
-      <h1>Contact</h1>
       <img src="assets-mtr_logo-lang-weiss.svg" alt="Logo MTR Equipments" class="logo">
     </div>
+    <!-- Animation -->
+    <div class="animation-container">
+        <div class="text">
+          <p>Hello</p>
+          <p>Nice&nbsp;to&nbsp;meet&nbsp;you</p>
+          <p>I'm&nbsp;André&nbsp;Metzger</p>
+          <p class="color">Let's&nbsp;get&nbsp;in&nbsp;touch!</p>
+        </div>
+      </div>
+
+    <!-- Contact -->
     <div class="contact-card">
       <div class="profile-pic-wrapper">
-        <img src="https://jasminoberle.github.io/mtr-contact/testperson.jpg" alt="Max Mustermann">
+        <img src="testperson.jpg" alt="Max Mustermann">
       </div>
-      <h2>Max Mustermann</h2>
-      <p class="title">Sales Manager</p>
+      <h1>André Metzger</h1>
+      <p class="title">CEO & Sales Manager</p>
       <a href="https://www.linkedin.com/in/jasmin-oberle-468357227" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
         LinkedIn</a>
       <a href="https://www.mtr-ag.ch" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
         Website</a>
-      <a href="https://jasminoberle.github.io/mtr-contact/test.vcf" class="bronze-button">Save to Contacts</a>
+      <a href="test.vcf" class="bronze-button">Save to Contacts</a>
       <small>If the contact doesn’t save automatically, open the downloaded file from your downloads folder and save it manually in your contacts app.</small>
     </div>
   </div> 
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
 </body>
 </html>
