@@ -5,7 +5,7 @@ const contactCard = document.querySelector('.contact-card')
 
 
 tl.to(animationContainer, {
-opacity: 1
+    opacity: 1
 })
 
 paragraphs.forEach(p => {
@@ -20,16 +20,16 @@ paragraphs.forEach(p => {
 
   tl.from(chars, {
     opacity: 0,
-    y: 40,
+    y: 30,
     rotateX: -90,
     stagger: 0.02
   }, '<')
   .to(chars, {
     opacity: 0,
-    y: -40,
+    y: -30,
     rotateX: 90,
     stagger: 0.02
-  }, '<1.3')
+  }, '<1.4')
 });
 
 tl.to(animationContainer, {
